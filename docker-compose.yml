@@ -1,0 +1,9 @@
+services:
+  demo-app:
+    image: calebb1/demo
+    container_name: demo-web-app
+    ports:
+      - "8080:8080"
+    stdin_open: true
+    tty: true
+    restart: no
