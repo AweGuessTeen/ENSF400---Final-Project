@@ -6,6 +6,8 @@ COPY . .
 
 RUN chmod +x ./gradlew
 
+RUN apt-get update && apt-get install -y bash curl unzip python3 python3-pip
+
 RUN curl -sSL https://chromedriver.storage.googleapis.com/113.0.5672.63/chromedriver_linux64.zip -o chromedriver.zip \
      && unzip chromedriver.zip \
      && mv chromedriver /usr/local/bin/ \
